@@ -1,28 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Navbar = ({toggleTheme}) => {
-
+const Navbar = () => {
+  
 
   return (
     <div>
       <div className="navbar">
         <div className="flex-none">
-          <button className="btn btn-square btn-ghost" >
+          <button className="btn btn-square btn-ghost mr-5" >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
-        <div className="flex-1">
-          <a className="btn btn-ghost text-xl">Voyager</a>
-        </div>
+        <button className="bg-yellow-900 text-yellow-400 border border-yellow-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-yellow-400 shadow-yellow-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+          Voyager
+        </button>
 
-        <label className="relative inline-flex items-center cursor-pointer">
-          <input className="sr-only peer" value="" type="checkbox" onClick={toggleTheme} />
-          <div
-            className={`w-24 h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-10 before:w-10 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-10 after:h-10 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0`}
-          ></div>
-        </label>
+        
+        
       </div>
     </div>
   );
