@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator } from './components';
-import './App.css';
 
 function App() {
   const [theme, setTheme] = useState('cupcake');
