@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./generator.css";
+import { useCookies } from "react-cookie";
 
 const Generator = () => {
   const [destination, setDestination] = useState("");
