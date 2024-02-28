@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 
 const SignUp = () => {
-    
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +18,7 @@ const SignUp = () => {
       return setMessage("Please fill out all fields.");
     }
 
-      
+
     const response = await axios
       .get(
         `https://mayank518.pythonanywhere.com/api/signup/?name=${name}&email=${email}&password=${password}&dob=${dob}`
@@ -30,7 +30,7 @@ const SignUp = () => {
           setCookie("email", email);
           setCookie("logged_in", true);
           console.log(cookies);
-          window.location.href = "/user";
+          window.location.href = "/dashboard";
         }
       });
   };
@@ -95,8 +95,8 @@ const SignUp = () => {
                     />
                 </div>
                 </div>
-                
-                
+
+
                 <div className="mt-5">
                     <div>{message}</div>
                 <button

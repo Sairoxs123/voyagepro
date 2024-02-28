@@ -9,6 +9,7 @@ import Cards from "./home/Cards";
 import Faqs from "./home/Faqs";
 import Dashboard from "./dashboard/Dashboard";
 import Home from "./subscribed/Home";
+import Viewplan from "./dashboard/Viewplan";
 
 export {
     SignIn,
@@ -21,5 +22,6 @@ export {
     Cards,
     Dashboard,
     Home,
-    Faqs
+    Faqs,
+    Viewplan
 }

@@ -12,13 +12,17 @@ const SignIn = ({ theme }) => {
   const [message, setMessage] = useState("")
   const [cookies, setCookie, removeCookie] = useCookies(['user'])
 
+  if (cookies.name && cookies.logged_in) {
+    return (window.location.href = "/dashboard");
+  }
+
   const login = async () => {
 
     if (!email || !password) {
       return setMessage("Please fill the form completely.")
     }
 
-    
+
     const response = await axios.get(
       `https://mayank518.pythonanywhere.com/api/login/?email=${email}&password=${password}`
     ).then(
@@ -30,7 +34,7 @@ const SignIn = ({ theme }) => {
           setCookie("email", email)
           setCookie('logged_in', true)
           console.log(cookies);
-          return window.location.href = "/user"
+          return window.location.href = "/dashboard"
         }
 
       }
