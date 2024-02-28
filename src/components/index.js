@@ -5,6 +5,8 @@ import Navbar from "./home/Navbar";
 import Subscription from "./home/Subscription";
 import Footer from "./home/Footer";
 import Generator from "./generator/Generator";
+import Cards from "./home/Cards";
+import Home from "./subscribed/Home";
 
 export {
     SignIn,
@@ -13,5 +15,7 @@ export {
     Hero,
     Generator,
     Subscription,
-    Footer
+    Footer,
+    Cards,
+    Home
 }

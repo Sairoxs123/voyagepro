@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs } from './components';
+import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Home, Faqs } from './components';
 import { useInView } from 'react-intersection-observer';
 
 function FadeInSection({ children }) {
@@ -49,6 +49,7 @@ function App() {
               <Generator />
             </div>
           </>} />
+          <Route path='/user' element={<Home />} />
         </Routes>
       </Router>
     </div>
