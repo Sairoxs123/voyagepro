@@ -27,6 +27,7 @@ const SignUp = () => {
         setMessage(res.data.message);
         if (res.data.message == "You have signed up successfully.") {
           setCookie("name", name);
+          setCookie("email", email);
           setCookie("logged_in", true);
           console.log(cookies);
           window.location.href = "/user";
