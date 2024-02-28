@@ -9,7 +9,7 @@ const Viewplan = () => {
 
   const getPlan = async () => {
     const response = await axios
-      .get(`http://127.0.0.1:8000/api/get/plan/?id=${id}`)
+      .get(`https://mayank518.pythonanywhere.com/api/get/plan/?id=${id}`)
       .then((res) => setPlan(res.data.plan));
   };
 
