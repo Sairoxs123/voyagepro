@@ -64,7 +64,7 @@ const Generator = () => {
     <div className="justify-center items-center p-[50px] grid-cols-2 h-screen">
         <div className="grid grid-cols-1 ">
             <div className="flex p-10">
-              <strong className="text-3xl m-5 ">Select Country: </strong>
+              <strong className="text-3xl m-3 ">Select Country: </strong>
               <input
                 className="input input-ghost w-full max-w-xs m-5"
                 type="text"
@@ -75,7 +75,7 @@ const Generator = () => {
               
             </div>
             <div className="flex p-10">
-              <strong className="text-3xl m-5">Enter Your Budget: </strong>
+              <strong className="text-3xl m-3">Enter Your Budget: </strong>
               <input
                 type="text"
                 placeholder="Type here"
@@ -84,7 +84,7 @@ const Generator = () => {
               />
             </div>
             <div className="flex p-10">
-              <strong className="text-3xl m-5">Enter Currency: </strong>
+              <strong className="text-3xl m-3">Enter Currency: </strong>
               <input
                 type="text"
                 placeholder="Type here"
@@ -94,7 +94,7 @@ const Generator = () => {
             </div>
 
             <div className="flex p-10" style={{ display: depDisplay }}>
-              <strong className="text-3xl m-5">Enter Date of Departure: </strong>
+              <strong className="text-3xl m-3">Enter Date of Departure: </strong>
               <input
                 type="date"
                 className="input input-ghost w-full max-w-xs m-5"
@@ -104,7 +104,7 @@ const Generator = () => {
           
 
         <div className="flex p-10" style={{ display: depDisplay }}>
-              <strong className="text-3xl m-5">Enter Current Location: </strong>
+              <strong className="text-3xl m-3">Enter Current Location: </strong>
               <input
                 type="text"
                 placeholder="Type here"
