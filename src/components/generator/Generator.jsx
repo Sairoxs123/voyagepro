@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./generator.css";
 import { useCookies } from "react-cookie";
+import axios from "axios";
 
 const Generator = () => {
   const [destination, setDestination] = useState("");
@@ -31,6 +32,32 @@ const Generator = () => {
     text = text.replace("html", "");
     setData(text);
     setLoader("");
+
+      if (depDisplay == "block") {
+      if (!departure || !current) {
+        return alert("Please fill all fields");
+      }
+      const title = `${current} to ${destination} with budget of ${budget}${currency}`;
+      const response = await axios
+        .post(
+          `https://mayank518.pythonanywhere.com/api/save/plan/`,
+          {
+            email: cookies.email,
+            plan: text,
+            title: title
+          },
+          {
+            headers: {
+              'Content-Type' : 'application/json',
+            }
+          }
+        )
+        .then((res) => {
+          console.log(res.data.saved);
+        })
+        .catch(err => console.log(err))
+    }
+    
   }
 
   const generate = () => {
