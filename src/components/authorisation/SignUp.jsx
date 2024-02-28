@@ -13,6 +13,12 @@ const SignUp = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
   const submit = async () => {
+
+    if (!name || !email || !password || !dob){
+      return setMessage("Please fill out all fields.");
+    }
+
+      
     const response = await axios
       .get(
         `https://mayank518.pythonanywhere.com/api/signup/?name=${name}&email=${email}&password=${password}&dob=${dob}`
