@@ -11,6 +11,7 @@ const Generator = () => {
   const [loader, setLoader] = useState("");
   const [departure, setDeparture] = useState("")
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+    const [current, setCurrent] = useState("")
 
   let depDisplay = !cookies.email ? "none" : "block"
 
@@ -37,9 +38,9 @@ const Generator = () => {
       alert("Please fill all fields");
       return;
     }
-
-          const sentence = !cookies.email ? `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern` :
-      `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern also generate a list of planes departing on ${departure} in the form of a proper html table with deparute time in GST and flight number with hyperlinks to the websites of the airlines`;
+    
+    const sentence = !cookies.email ? `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern` :
+    `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern also generate a list of planes departing on ${departure} from ${current} to ${destination} in the form of a proper html table with deparute time in GST and flight number with hyperlinks to the websites of the airlines`;
 
     
     setLoader(
@@ -99,8 +100,18 @@ const Generator = () => {
                 className="input input-ghost w-full max-w-xs m-5"
                 onChange={(e) => setDeparture(e.target.value)}
               />
-            </div>                
+            </div>              
+          
 
+        <div className="flex p-10" style={{ display: depDisplay }}>
+              <strong className="text-3xl m-5">Enter Current Location: </strong>
+              <input
+                type="text"
+                placeholder="Type here"
+                className="input input-ghost w-full max-w-xs m-5"
+                onChange={(e) => setCurrent(e.target.value)}
+              />
+            </div>    
 
 
             <br />
