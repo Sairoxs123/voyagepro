@@ -33,7 +33,7 @@ const Generator = () => {
       return;
     }
 
-    const sentence = `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of place without output`;
+    const sentence = `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output`;
 
     
     setLoader(
