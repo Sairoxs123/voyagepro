@@ -29,7 +29,7 @@ const Generator = () => {
     const response = await result.response;
     let text = response.text();
     text = text.replaceAll("`", "");
-    text = text.replace("html", "");
+    text = text.replaceAll("html", "");
     setData(text);
     setLoader("");
 
