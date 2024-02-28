@@ -37,7 +37,7 @@ const Generator = () => {
       if (!departure || !current) {
         return alert("Please fill all fields");
       }
-      const title = `${current} to ${destination} with budget of ${budget}${currency}`;
+      const title = `${current} to ${destination} with budget of ${budget} ${currency}`;
       const response = await axios
         .post(
           `https://mayank518.pythonanywhere.com/api/save/plan/`,
