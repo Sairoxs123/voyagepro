@@ -22,7 +22,7 @@ export {
     Footer,
     Generator,
     Cards,
-    Dashboard
+    Dashboard,
     Home,
     Faqs
 }
