@@ -8,6 +8,10 @@ const Generator = () => {
   const [currency, setCurrency] = useState("");
   const [data, setData] = useState("");
   const [loader, setLoader] = useState("");
+  const [departure, setDeparture] = useState("")
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+
+  let depDisplay = !cookies.email ? "none" : "block"
 
   const genAI = new GoogleGenerativeAI(
     "AIzaSyAzsqBT9wCN03wqE3T3FtbfI11Pe1W71H0"
@@ -85,6 +89,15 @@ const Generator = () => {
                 onChange={(e) => setCurrency(e.target.value)}
               />
             </div>
+
+            <div className="flex p-10" style={{ display: depDisplay }}>
+              <strong className="text-3xl m-5">Enter Date of Departure: </strong>
+              <input
+                type="date"
+                className="input input-ghost w-full max-w-xs m-5"
+                onChange={(e) => setDeparture(e.target.value)}
+              />
+            </div>      
 
             <br />
             <br />
