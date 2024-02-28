@@ -15,7 +15,7 @@ const SignUp = () => {
   const submit = async () => {
     const response = await axios
       .get(
-        `http://127.0.0.1:8000/api/login/?name=${name}&email=${email}&password=${password}&dob=${dob}`
+        `https://mayank518.pythonanywhere.com/api/signup/?name=${name}&email=${email}&password=${password}&dob=${dob}`
       )
       .then((res) => {
         setMessage(res.data.message);
