@@ -91,6 +91,15 @@ const Generator = () => {
               />
             </div>
 
+            <div className="flex p-10" style={{ display: depDisplay }}>
+              <strong className="text-3xl m-5">Enter Date of Departure: </strong>
+              <input
+                type="date"
+                className="input input-ghost w-full max-w-xs m-5"
+                onChange={(e) => setDeparture(e.target.value)}
+              />
+            </div>                
+
 
 
             <br />
