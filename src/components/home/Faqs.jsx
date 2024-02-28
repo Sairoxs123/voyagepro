@@ -22,7 +22,7 @@ const Faqs = () => {
           Can I customize the generated itinerary?
         </div>
         <div className="collapse-content"> 
-          <p>Yes, you can customize the generated itinerary by adding or removing activities or adjusting the budget allocation according to your preferences.</p>
+          <p>Yes, you can customize by adjusting the budget allocation according to your preferences.</p>
         </div>
       </div>
       
@@ -32,7 +32,7 @@ const Faqs = () => {
           Is there a way to save my itinerary?
         </div>
         <div className="collapse-content"> 
-          <p>Yes, we do save your itinerary and it can be viewed whenever you wish</p>
+          <p>Yes, we do save your itinerary if you have an account and are logged-in and it can be viewed whenever you wish</p>
         </div>
       </div>
       

@@ -9,6 +9,7 @@ import Generator from "./generator/Generator";
 import Cards from "./home/Cards";
 import Faqs from "./home/Faqs";
 import Dashboard from "./dashboard/Dashboard";
+import Home from "./subscribed/Home";
 
 export {
 
@@ -21,7 +22,7 @@ export {
     Footer,
     Generator,
     Cards,
-    Faqs,
     Dashboard
-    
+    Home,
+    Faqs
 }
