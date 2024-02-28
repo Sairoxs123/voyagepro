@@ -63,7 +63,7 @@ const Generator = () => {
   return (
     <div className="justify-center items-center p-[50px] grid-cols-2 h-screen">
         <div className="grid grid-cols-1 ">
-            <div className="flex p-10">
+            <div className={`flex p-${!cookies.email ? "10" : "5"}`}>
               <strong className="text-3xl m-5 ">Select Country: </strong>
               <input
                 className="input input-ghost w-full max-w-xs m-5"
@@ -74,7 +74,7 @@ const Generator = () => {
                 
               
             </div>
-            <div className="flex p-10">
+            <div className={`flex p-${!cookies.email ? "10" : "5"}`}>
               <strong className="text-3xl m-5">Enter Your Budget: </strong>
               <input
                 type="text"
@@ -83,7 +83,7 @@ const Generator = () => {
                 onChange={(e) => setBudget(e.target.value)}
               />
             </div>
-            <div className="flex p-10">
+            <div className={`flex p-${!cookies.email ? "10" : "5"}`}>
               <strong className="text-3xl m-5">Enter Currency: </strong>
               <input
                 type="text"
@@ -93,7 +93,7 @@ const Generator = () => {
               />
             </div>
 
-            <div className="flex p-10" style={{ display: depDisplay }}>
+            <div className={`flex p-${!cookies.email ? "10" : "5"}`} style={{ display: depDisplay }}>
               <strong className="text-3xl m-5">Enter Date of Departure: </strong>
               <input
                 type="date"
@@ -103,7 +103,7 @@ const Generator = () => {
             </div>              
           
 
-        <div className="flex p-10" style={{ display: depDisplay }}>
+        <div className={`flex p-${!cookies.email ? "10" : "5"}`} style={{ display: depDisplay }}>
               <strong className="text-3xl m-5">Enter Current Location: </strong>
               <input
                 type="text"
