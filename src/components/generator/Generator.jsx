@@ -37,7 +37,8 @@ const Generator = () => {
       return;
     }
 
-    const sentence = `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern`;
+          const sentence = !cookies.email ? `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern` :
+      `Generate a day wise iterinary for a trip to ${destination} with a budget of ${budget}${currency} in the form of html code within a div element without using id attribute for any of the elements with a budget summary and use iframe with google maps api for showing location of some of the places mentioned in the plan without output and also add a exciting tagline to each day and make sure to generate maps with respect to each day and also keep your response pattern the same for every propmt never change the pattern also generate a list of planes departing on ${departure} in the form of a proper html table with deparute time in GST and flight number with hyperlinks to the websites of the airlines`;
 
     
     setLoader(
