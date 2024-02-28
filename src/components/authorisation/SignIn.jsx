@@ -27,6 +27,7 @@ const SignIn = ({ theme }) => {
 
         if (res.data.message == "True"){
           setCookie('name', res.data.name)
+          setCookie("email", email)
           setCookie('logged_in', true)
           console.log(cookies);
           return window.location.href = "/user"
