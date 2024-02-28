@@ -69,7 +69,7 @@ const SignUp = () => {
                     Date of Birth
                   </label>
                   <input
-                    className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-white border-gray-800 text-gray-800 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                    className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                     type="date"
                     id="dob"
                     onChange={(e) => setDob(e.target.value)}
