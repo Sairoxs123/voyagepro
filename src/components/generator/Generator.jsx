@@ -41,7 +41,7 @@ const Generator = () => {
       const date = new Date();
       const response = await axios
         .post(
-          `http://127.0.0.1:8000/api/save/plan/`,
+          `https://mayank518.pythonanywhere.com/api/save/plan/`,
           {
             email: cookies.email,
             plan: text,
