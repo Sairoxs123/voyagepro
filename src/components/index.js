@@ -7,6 +7,7 @@ import Footer from "./home/Footer";
 import Generator from "./generator/Generator";
 import Cards from "./home/Cards";
 import Home from "./subscribed/Home";
+import Faqs from "./home/Faqs"
 
 export {
     SignIn,
@@ -17,5 +18,6 @@ export {
     Subscription,
     Footer,
     Cards,
-    Home
+    Home,
+    Faqs
 }
