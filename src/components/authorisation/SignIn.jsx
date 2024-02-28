@@ -13,6 +13,12 @@ const SignIn = ({ theme }) => {
   const [cookies, setCookie, removeCookie] = useCookies(['user'])
 
   const login = async () => {
+
+    if (!email || !password) {
+      return setMessage("Please fill the form completely.")
+    }
+
+    
     const response = await axios.get(
       `https://mayank518.pythonanywhere.com/api/login/?email=${email}&password=${password}`
     ).then(
