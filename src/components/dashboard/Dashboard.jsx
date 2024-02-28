@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   const getPlans = async () => {
     const response = await axios
-      .get(`http://127.0.0.1:8000/api/get/plans/?email=${cookies.email}`)
+      .get(`https://mayank518.pythonanywhere.com/api/get/plans/?email=${cookies.email}`)
       .then((res) => {
         setPlans(res.data.plans);
       });
@@ -33,7 +33,7 @@ const Dashboard = () => {
 
   const deletePlan = async (id) => {
     const response = await axios.get(
-      `http://127.0.0.1:8000/api/delete/plan/?id=${id}`
+      `https://mayank518.pythonanywhere.com/api/delete/plan/?id=${id}`
     ).then(
       res => {
         if (res.data.deleted == "yes") {
