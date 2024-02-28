@@ -19,6 +19,7 @@ const Home = () => {
   const logout = () => {
     removeCookie("name");
     removeCookie("logged_in");
+    removeCookie("email")
     return (window.location.href = "/signin");
   };
 
