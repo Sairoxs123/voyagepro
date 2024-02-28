@@ -92,7 +92,7 @@ const Dashboard = () => {
                   <tr key={index}>
                     <td className="px-6 py-4 whitespace-nowrap">{index + 1}</td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <a href={`/dashboard/view/${item.id}`} target="_blank">{item.title}</a>
+                      <a href={`/dashboard/view/${item.id}`} target="_blank" style={{ textDecoration: 'underline' }}>{item.title}</a>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">{item.date}</td>
                     <td className="px-6 py-4 whitespace-nowrap">
