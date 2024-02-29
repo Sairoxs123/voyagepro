@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 import axios from "axios"
 import { useCookies } from "react-cookie";
 
@@ -34,6 +34,12 @@ const SignIn = () => {
     )
   }
 
+  useEffect(() => {
+    if (cookies.logged_in) {
+      window.location.href = "/dashboard"
+    }
+  }, []) 
+ 
   return (
     <div className='flex justify-center items-center h-screen'>
       <div className="relative">
