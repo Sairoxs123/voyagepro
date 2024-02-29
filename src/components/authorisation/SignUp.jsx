@@ -29,7 +29,6 @@ const SignUp = () => {
           setCookie("name", name);
           setCookie("email", email);
           setCookie("logged_in", true);
-          console.log(cookies);
           window.location.href = "/dashboard";
         }
       });
