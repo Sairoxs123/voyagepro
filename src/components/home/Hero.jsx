@@ -7,7 +7,7 @@ const Hero = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                 <h1 className=" text-5xl font-bold">VOYAGER PRO</h1>
-                <p className="mb-5 text-sm text-amber-400"> Powered by <img height="10" width="10" src="https://www.gstatic.com/lamda/images/gemini_sparkle_blue_33c17e77c4ebbdd9490b683b9812247e257b6f70.svg" />  Gemini</p>
+                <p className="mb-5 text-sm text-amber-400"> Powered by Gemini</p>
                 <p className="mb-5 text-2xl ">Where your dreams of travelling abroad come to life</p>
                 <a href='#subscription'>
                   <div class="w-full h-40 flex items-center justify-center cursor-pointer">
