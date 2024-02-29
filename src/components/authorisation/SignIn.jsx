@@ -21,13 +21,13 @@ const SignIn = () => {
       `https://mayank518.pythonanywhere.com/api/login/?email=${email}&password=${password}`
     ).then(
       res => {
-        setMessage(res.data.message)
-
         if (res.data.message == "True"){
           setCookie('name', res.data.name)
           setCookie("email", email)
           setCookie('logged_in', true)
           return window.location.href = "/dashboard"
+        } else {
+          setMessage(res.data.message)
         }
 
       }
