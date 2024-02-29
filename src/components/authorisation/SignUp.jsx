@@ -1,39 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import axios from "axios";
-import { useCookies } from "react-cookie";
+import React from 'react'
 
 const SignUp = () => {
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [dob, setDob] = useState("");
-  const [message, setMessage] = useState("");
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-
-  const submit = async () => {
-
-    if (!name || !email || !password || !dob){
-      return setMessage("Please fill out all fields.");
-    }
-
-
-    const response = await axios
-      .get(
-        `https://mayank518.pythonanywhere.com/api/signup/?name=${name}&email=${email}&password=${password}&dob=${dob}`
-      )
-      .then((res) => {
-        setMessage(res.data.message);
-        if (res.data.message == "You have signed up successfully.") {
-          setCookie("name", name);
-          setCookie("email", email);
-          setCookie("logged_in", true);
-          console.log(cookies);
-          window.location.href = "/dashboard";
-        }
-      });
-  };
+    
+    
 
     return (
     <div className='flex justify-center items-center h-screen '>
@@ -53,7 +22,6 @@ const SignUp = () => {
                     className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                     type="text"
                     id="fullname"
-                    onChange={(e) => setName(e.target.value)}
                     />
                 </div>
                 <div>
@@ -65,22 +33,18 @@ const SignUp = () => {
                     className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                     type="email"
                     id="email"
-                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
                 <div>
-                  <label
+                    <label
                     className="font-semibold text-sm text-gray-400 pb-1 block"
-                    for="dob"
-                  >
-                    Date of Birth
-                  </label>
-                  <input
+                    for="username"
+                    >Username</label>
+                    <input
                     className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                    type="date"
-                    id="dob"
-                    onChange={(e) => setDob(e.target.value)}
-                  />
+                    type="text"
+                    id="username"
+                    />
                 </div>
                 <div>
                     <label
@@ -91,18 +55,42 @@ const SignUp = () => {
                     className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                     type="password"
                     id="password"
-                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
                 </div>
-
-
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label
+                    className="font-semibold text-sm text-gray-400 pb-1 block"
+                    for="dob"
+                    >Date of Birth</label>
+                    <input
+                    className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                    type="date"
+                    id="dob"
+                    />
+                </div>
+                <div>
+                    <label
+                    className="font-semibold text-sm text-gray-400 pb-1 block"
+                    for="gender"
+                    >Gender</label>
+                    <select
+                    className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-black border-gray-800 text-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                    id="gender"
+                    >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    </select>
+                </div>
+                </div>
+                
+                
                 <div className="mt-5">
-                    <div>{message}</div>
                 <button
                     className="py-2 px-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-gray-300 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-                    type="button"
-                    onClick={submit}
+                    type="submit"
                 >
                     Sign up
                 </button>
