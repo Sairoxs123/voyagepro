@@ -3,13 +3,13 @@ import React from 'react';
 const Hero = () => {
   return (
     <div>
-        <div className="hero min-h-screen mb-10" style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
-            <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero min-h-screen mb-10 " >
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">VOYAGER PRO</h1>
+                <h1 className=" text-5xl font-bold">VOYAGER PRO</h1>
+                <p className="mb-5 text-sm text-amber-400">Powered by Gemini</p>
                 <p className="mb-5 text-2xl ">Where your dreams of travelling abroad come to life</p>
-                <a href='/generator'>
+                <a href='#subscription'>
                   <div class="w-full h-40 flex items-center justify-center cursor-pointer">
                     <div
                       class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-amber-400 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 dark:bg-gray-700 dark:text-white dark:hover:text-gray-200 dark:shadow-none group"
@@ -69,4 +69,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
