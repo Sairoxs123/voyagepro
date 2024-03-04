@@ -33,12 +33,11 @@ const Viewplan = () => {
   };
 
   useEffect(() => {
-    console.log(true)
     getPlan();
   }, []);
 
   return (
-    plan !== "" ? <VerticalTimeline data={plan} /> : <>hello</>
+    plan.length
   );
 };
 
