@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import VerticalTimeline from "./VerticalTimeline";
 
 const Viewplan = () => {
   const { id } = useParams();
@@ -10,7 +11,24 @@ const Viewplan = () => {
   const getPlan = async () => {
     const response = await axios
       .get(`https://mayank518.pythonanywhere.com/api/get/plan/?id=${id}`)
-      .then((res) => setPlan(res.data.plan));
+      .then((res) => {
+        let text = res.data.plan
+        let raw = text.split("</div>")
+
+        let blah = []
+
+        for (let i = 0; i < raw.length; i ++) {
+          let temp = raw[i]
+          temp = raw[i].replaceAll("\n", "")
+          if (temp.trim() == "") {
+            continue
+          } else {
+            blah.push(temp)
+          }
+        }
+
+        setPlan(blah);
+      });
   };
 
   useEffect(() => {
@@ -18,16 +36,7 @@ const Viewplan = () => {
   }, []);
 
   return (
-    <div>
-      <center>
-      {plan == "does not exist" ? (
-        <h1>Plan with this ID does not exist</h1>
-      ) : (
-        <div id="data" dangerouslySetInnerHTML={{ __html: plan }} />
-      )}
-      </center>
-      <br />
-    </div>
+    plan !== "" ? <VerticalTimeline data={plan} /> : null
   );
 };
 
