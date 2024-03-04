@@ -33,6 +33,7 @@ const Viewplan = () => {
   };
 
   useEffect(() => {
+    console.log(true)
     getPlan();
   }, []);
 
