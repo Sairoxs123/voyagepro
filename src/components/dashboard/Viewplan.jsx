@@ -12,6 +12,7 @@ const Viewplan = () => {
     const response = await axios
       .get(`https://mayank518.pythonanywhere.com/api/get/plan/?id=${id}`)
       .then((res) => {
+        console.log(true)
         let text = res.data.plan
         let raw = text.split("</div>")
 
