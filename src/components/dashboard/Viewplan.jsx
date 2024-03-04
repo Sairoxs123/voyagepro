@@ -37,7 +37,7 @@ const Viewplan = () => {
   }, []);
 
   return (
-    plan.length
+    plan !== "" ? <VerticalTimeline data={plan} /> : null
   );
 };
 
