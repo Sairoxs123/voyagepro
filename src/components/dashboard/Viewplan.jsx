@@ -37,7 +37,7 @@ const Viewplan = () => {
   }, []);
 
   return (
-    plan !== "" ? <VerticalTimeline data={plan} /> : null
+    plan !== "" ? <VerticalTimeline data={plan} /> : <>hello</>
   );
 };
 
