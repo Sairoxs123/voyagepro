@@ -8,7 +8,7 @@ const Admin = () => {
 
   const getMessages = async () => {
     const response = await axios
-      .get(`http://127.0.0.1:8000/api/contact/fetch/`)
+      .get(`https://mayank518.pythonanywhere.com/api/contact/fetch/`)
       .then((res) => {
         setMessages(res.data.messages);
       });
@@ -25,7 +25,7 @@ const Admin = () => {
     let temp = messages.filter((element) => element.id !== id)
     setMessages(temp.length == 0 ? "" : temp)
     const response = await axios
-    .get(`http://127.0.0.1:8000/api/contact/delete/?id=${id}`)
+    .get(`https://mayank518.pythonanywhere.com/api/contact/delete/?id=${id}`)
     .then(res => {
       getMessages()
     })
