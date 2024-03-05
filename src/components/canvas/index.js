@@ -1,5 +1,8 @@
 import Flight from "./Flight";
+import EarthCanvas from "./Earth";
 
 export {
-    Flight
+    Flight,
+    EarthCanvas
+    
 }
