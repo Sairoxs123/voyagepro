@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs, Dashboard, Viewplan } from './components';
+import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs, Dashboard, Viewplan, Contact } from './components';
 import { useInView } from 'react-intersection-observer';
 import { Flight } from './components/canvas';
 
@@ -48,6 +48,9 @@ function App() {
             </FadeInSection>
             <FadeInSection>
               <Faqs />
+            </FadeInSection>
+            <FadeInSection>
+              <Contact />
             </FadeInSection>
             <FadeInSection>
               <Footer />
