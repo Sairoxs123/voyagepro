@@ -63,7 +63,7 @@ const Faqs = () => {
           Are there any hidden fees associated with using the app?
         </div>
         <div className="collapse-content"> 
-          <p>No, there are no hidden fees associated with using our app. It is free to download and use, and we do not charge any additional fees for generating or customizing travel itineraries. However, we do provide information about flights and hotels if a user is logged-in. </p>
+          <p>No, there are no hidden fees associated with using our app. It is free to use, and we do not charge any additional fees for generating or customizing travel itineraries. However, we do provide information about flights and hotels if a user is logged-in. </p>
         </div>
       </div>
     </div>
