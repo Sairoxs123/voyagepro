@@ -10,13 +10,13 @@ const Message = () => {
 
   const getMessage = async () => {
     const response = await axios
-      .get(`http://127.0.0.1:8000/api/contact/view/?id=${id}`)
+      .get(`https://mayank518.pythonanywhere.com/api/contact/view/?id=${id}`)
       .then((res) => setMessage(res.data.message));
   };
 
   const edit = async (id) => {
     const response = await axios
-      .get(`http://127.0.0.1:8000/api/contact/edit/?id=${id}`)
+      .get(`https://mayank518.pythonanywhere.com/api/contact/edit/?id=${id}`)
       .then((res) => {
         getMessage();
       });
