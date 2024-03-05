@@ -27,18 +27,23 @@ const Message = () => {
   }, []);
 
   return (
-    <div>
-      {message.message}
-      <br />
-      <br />
-      {typeof message == "string" ? (
-        ""
-      ) : (
-        <button onClick={() => edit(id)}>
-          Mark as {message.solved ? "unread" : "read"}
-        </button>
-      )}
-    </div>
+    <center>
+      <div>
+        <h1 className="text-3xl">{message.message}</h1>
+        <br />
+        <br />
+        {typeof message == "string" ? (
+          ""
+        ) : (
+          <button
+            onClick={() => edit(id)}
+            className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md"
+          >
+            Mark as {message.solved ? "unread" : "read"}
+          </button>
+        )}
+      </div>
+    </center>
   );
 };
 
