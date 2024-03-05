@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs, Dashboard, Contact } from './components';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax'; // Import ParallaxProvider
+import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs, Dashboard, Viewplan, Contact, AdminLogin, Admin, Message } from './components';
+
 import { useInView } from 'react-intersection-observer';
 import { Flight, StarsCanvas } from './components/canvas';
 
 function FadeInSection({ children }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.2, 
+    threshold: 0.2,
   });
 
   return (
@@ -22,12 +23,15 @@ function App() {
   return (
     <div className='justify-center items-center'>
       <Router>
-        
+       
         <ParallaxProvider>
           <Routes>
             <Route path="/signup" element={<SignUp style={{ backgroundColor: '#1a1a1a' }} />} />
             <Route path="/signin" element={<SignIn style={{ backgroundColor: '#222222' }} />} />
             <Route path='/dashboard' element={<Dashboard style={{ backgroundColor: '#333333' }} />} />
+             <Route path='/admin/login' element={<AdminLogin />} />
+            <Route path='/admin' element={<Admin />} />
+            <Route path='/admin/view/message/:id' element={<Message />} />
             <Route path='/dashboard/view/:id' element={<Viewplan style={{ backgroundColor: '#333333' }} />} />
             <Route path="/" element={<>
               <ParallaxProvider>
@@ -81,6 +85,7 @@ function App() {
             </>} />
           </Routes>
         </ParallaxProvider>
+
       </Router>
     </div>
   );
