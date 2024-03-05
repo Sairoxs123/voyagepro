@@ -44,16 +44,18 @@ const Flight = () => {
   }, [width, height]);
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}> {/* Adjust the width and height here */}
+    <div style={{ width: '100vw', height: '100vh' }}> 
       <Canvas style={{ background: '#000' }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <pointLight position={[-10, -10, -5]} intensity={0.5} />
-        <OrbitControls />
+        <OrbitControls 
+          enableZoom={false}
+        />
         <group ref={flightRef}>
           <Model />
         </group>
-        <camera position={[0, 0, 10]} /> {/* Adjust camera position to make top part visible */}
+        <camera position={[0, 0, 10]} /> 
       </Canvas>
     </div>
   );
