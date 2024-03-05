@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs, Dashboard, Viewplan, Contact } from './components';
+import { SignIn, SignUp, Hero, Navbar, Subscription, Footer, Generator, Cards, Faqs, Dashboard, Viewplan, Contact, AdminLogin, Admin, Message } from './components';
 import { useInView } from 'react-intersection-observer';
 import { Flight } from './components/canvas';
 
 function FadeInSection({ children }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.2, 
+    threshold: 0.2,
   });
 
   return (
@@ -26,16 +26,19 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/dashboard/view/:id' element={<Viewplan />} />
+          <Route path='/admin/login' element={<AdminLogin />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/admin/view/message/:id' element={<Message />} />
           <Route path="/" element={<>
             <FadeInSection>
               <Navbar />
             </FadeInSection>
 
             <div className='grid grid-cols-2'>
-              <FadeInSection> 
+              <FadeInSection>
                 <Flight />
               </FadeInSection>
-              <FadeInSection> 
+              <FadeInSection>
                 <Hero />
               </FadeInSection>
             </div>
@@ -55,7 +58,7 @@ function App() {
             <FadeInSection>
               <Footer />
             </FadeInSection>
-             
+
           </>} />
           <Route path='/generator' element={<>
             <div className=''>

@@ -11,6 +11,9 @@ import Dashboard from "./dashboard/Dashboard";
 import Home from "./subscribed/Home";
 import Viewplan from "./dashboard/Viewplan";
 import Contact from "./home/Contact";
+import AdminLogin from "./admin/Login";
+import Admin from "./admin/Admin";
+import Message from "./admin/Message";
 
 export {
     SignIn,
@@ -25,5 +28,8 @@ export {
     Home,
     Faqs,
     Viewplan,
-    Contact
+    Contact,
+    AdminLogin,
+    Admin,
+    Message
 }
