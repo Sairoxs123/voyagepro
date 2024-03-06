@@ -13,9 +13,9 @@ const VerticalTimeline = (props) => {
 
         if (topBox < triggerBottom) {
           box.classList.add("show");
-        } else {
+        } /*else {
           box.classList.remove("show");
-        }
+        }*/
       });
     };
 
