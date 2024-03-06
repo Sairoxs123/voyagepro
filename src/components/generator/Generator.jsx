@@ -161,7 +161,7 @@ const Generator = () => {
           />
           <datalist id="types">
             {types.map((element, index) => {
-              <option value={element} key={index}>{element}</option>
+              return <option value={element} key={index}>{element}</option>
             })}
           </datalist>
         </div>
